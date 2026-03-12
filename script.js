@@ -1,19 +1,38 @@
-const botao = document.getElementById("botaoAdicionar");
+const btnAdicionar = document.getElementById("btnAdicionar");
+const input = document.getElementById("inputTarefa");
+const mensagem = document.getElementById("mensagem");
+const lista = document.getElementById("listaTarefas");
 
-botao.addEventListener("click", function(){
+btnAdicionar.addEventListener("click", function(){
 
-    const input = document.getElementById("item");
+    const texto = input.value.trim();
 
-    const texto = input.value;
+    // limpar mensagens anteriores
+    mensagem.textContent = "";
+    mensagem.classList.remove("text-danger","text-success");
 
+    // verificar se está vazio
+    if(texto === ""){
+        mensagem.textContent = "Tarefa vazia!";
+        mensagem.classList.add("text-danger");
+        return;
+    }
+
+    // criar li
     const li = document.createElement("li");
+    li.classList.add("list-group-item");
 
+    // inserir texto da tarefa
     li.textContent = texto;
 
-    const lista = document.getElementById("lista");
-
+    // adicionar na lista
     lista.appendChild(li);
 
+    // limpar input
     input.value = "";
+
+    // mensagem de sucesso
+    mensagem.textContent = "Tarefa adicionada com sucesso!";
+    mensagem.classList.add("text-success");
 
 });

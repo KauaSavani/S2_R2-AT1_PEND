@@ -12,25 +12,50 @@ btnAdicionar.addEventListener("click", function(){
 
     // criar li
     const li = document.createElement("li");
-    li.classList.add("list-group-item");
+    li.classList.add("list-group-item","d-flex","align-items-center","justify-content-between");
 
-    // inserir texto
-    li.textContent = texto;
+    // container esquerda
+    const div = document.createElement("div");
+    div.classList.add("d-flex","align-items-center");
 
-    // criar botão remover
+    // checkbox
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.classList.add("form-check-input","me-2");
+
+    // texto da tarefa
+    const span = document.createElement("span");
+    span.textContent = texto;
+
+    // marcar como concluído
+    checkbox.addEventListener("change", function(){
+
+        if(checkbox.checked){
+            span.style.textDecoration = "line-through";
+            span.style.color = "gray";
+        } else {
+            span.style.textDecoration = "none";
+            span.style.color = "black";
+        }
+
+    });
+
+    // botão remover
     const btnRemover = document.createElement("button");
     btnRemover.textContent = "Remover";
-    btnRemover.classList.add("btn","btn-danger","btn-sm","ms-3");
+    btnRemover.classList.add("btn","btn-danger","btn-sm");
 
-    // evento para remover tarefa
     btnRemover.addEventListener("click", function(){
         li.remove();
     });
 
-    // adicionar botão dentro do li
+    // montar estrutura
+    div.appendChild(checkbox);
+    div.appendChild(span);
+
+    li.appendChild(div);
     li.appendChild(btnRemover);
 
-    // adicionar li na lista
     lista.appendChild(li);
 
     // limpar input

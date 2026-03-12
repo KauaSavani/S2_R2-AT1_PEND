@@ -3,13 +3,13 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Alterar Texto</title>
+<title>Lista Dinâmica</title>
 
 <style>
 
 body{
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color:#f0f0f0;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -24,10 +24,15 @@ body{
     box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
+input{
+    padding:10px;
+    margin-top:10px;
+}
+
 button{
     padding:10px 20px;
-    margin-top:15px;
-    background:#000000;
+    margin-left:5px;
+    background:black;
     color:white;
     border:none;
     border-radius:5px;
@@ -38,9 +43,9 @@ button:hover{
     background:#0e82ff;
 }
 
-#texto{
-    font-size:18px;
-    margin-top:10px;
+ul{
+    margin-top:20px;
+    text-align:left;
 }
 
 </style>
@@ -51,15 +56,15 @@ button:hover{
 
 <div class="container">
 
-<h2>Alterar Texto</h2>
+<h2>Adicionar Item na Lista</h2>
 
-<p id="texto">
-Clique no botão para mudar este texto.
-</p>
+<input type="text" id="item" placeholder="Digite um item">
 
-<button id="botao">
-Mudar Texto
+<button id="botaoAdicionar">
+Adicionar
 </button>
+
+<ul id="lista"></ul>
 
 </div>
 

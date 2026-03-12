@@ -1,9 +1,19 @@
-const botao = document.getElementById("botao");
+const botao = document.getElementById("botaoAdicionar");
 
 botao.addEventListener("click", function(){
 
-    const texto = document.getElementById("texto");
+    const input = document.getElementById("item");
 
-    texto.textContent = "Texto alterado com JavaScript!";
+    const texto = input.value;
+
+    const li = document.createElement("li");
+
+    li.textContent = texto;
+
+    const lista = document.getElementById("lista");
+
+    lista.appendChild(li);
+
+    input.value = "";
 
 });

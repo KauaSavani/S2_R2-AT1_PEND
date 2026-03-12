@@ -1,20 +1,12 @@
 const btnAdicionar = document.getElementById("btnAdicionar");
 const input = document.getElementById("inputTarefa");
-const mensagem = document.getElementById("mensagem");
 const lista = document.getElementById("listaTarefas");
 
 btnAdicionar.addEventListener("click", function(){
 
     const texto = input.value.trim();
 
-    // limpar mensagens anteriores
-    mensagem.textContent = "";
-    mensagem.classList.remove("text-danger","text-success");
-
-    // verificar se está vazio
     if(texto === ""){
-        mensagem.textContent = "Tarefa vazia!";
-        mensagem.classList.add("text-danger");
         return;
     }
 
@@ -22,17 +14,26 @@ btnAdicionar.addEventListener("click", function(){
     const li = document.createElement("li");
     li.classList.add("list-group-item");
 
-    // inserir texto da tarefa
+    // inserir texto
     li.textContent = texto;
 
-    // adicionar na lista
+    // criar botão remover
+    const btnRemover = document.createElement("button");
+    btnRemover.textContent = "Remover";
+    btnRemover.classList.add("btn","btn-danger","btn-sm","ms-3");
+
+    // evento para remover tarefa
+    btnRemover.addEventListener("click", function(){
+        li.remove();
+    });
+
+    // adicionar botão dentro do li
+    li.appendChild(btnRemover);
+
+    // adicionar li na lista
     lista.appendChild(li);
 
     // limpar input
     input.value = "";
-
-    // mensagem de sucesso
-    mensagem.textContent = "Tarefa adicionada com sucesso!";
-    mensagem.classList.add("text-success");
 
 });

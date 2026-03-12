@@ -1,9 +1,11 @@
-const botao = document.getElementById("botao")
+const botao = document.getElementById("botao");
 
 botao.addEventListener("click", function(){
 
-    const texto = document.getElementById("texto")
+    const nome = document.getElementById("nome").value;
 
-    texto.textContent = "Texto alterado com JavaScript!"
+    const mensagem = document.getElementById("mensagem");
 
-})
+    mensagem.textContent = "Olá mundo " + nome + "Seja bem-vindo!";
+
+});

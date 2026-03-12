@@ -3,13 +3,13 @@
 
 <head>
 <meta charset="UTF-8">
-<title>exercicio2</title>
+<title>Alterar Texto</title>
 
 <style>
 
 body{
-    font-family: Arial;
-    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -24,18 +24,23 @@ body{
     box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-input{
-    padding:10px;
-    margin-top:10px;
-}
-
 button{
     padding:10px 20px;
-    margin-top:10px;
+    margin-top:15px;
     background:#000000;
     color:white;
     border:none;
     border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0e82ff;
+}
+
+#texto{
+    font-size:18px;
+    margin-top:10px;
 }
 
 </style>
@@ -46,15 +51,15 @@ button{
 
 <div class="container">
 
-<h2>Digite seu nome</h2>
+<h2>Alterar Texto</h2>
 
-<input type="text" id="nome" placeholder="Seu nome">
+<p id="texto">
+Clique no botão para mudar este texto.
+</p>
 
-<br><br>
-
-<button id="botao">Mostrar mensagem</button>
-
-<p id="mensagem"></p>
+<button id="botao">
+Mudar Texto
+</button>
 
 </div>
 

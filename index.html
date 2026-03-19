@@ -1,39 +1,42 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html> <!-- Define que o documento é HTML5 -->
+
+<html lang="pt-br"> <!-- Define o idioma como português do Brasil -->
+
 <head>
-    <meta charset="UTF-8">
-    <title>Lista de Tarefas</title>
+    <meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
+    <title>Lista de Tarefas</title> <!-- Título da aba do navegador -->
 
     <link 
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-      rel="stylesheet">
+      rel="stylesheet"> <!-- Importa o Bootstrap (estilização pronta) -->
 </head>
-<body class="bg-light">
 
-    <main class="container mt-5">
-        <h1 class="text-center mb-4">📋 Lista de Tarefas</h1>
+<body class="bg-light"> <!-- Aplica fundo claro com Bootstrap -->
 
-        <div class="card">
-            <div class="card-body">
+    <main class="container mt-5"> <!-- Container central com margem no topo -->
+        <h1 class="text-center mb-4">📋 Lista de Tarefas</h1> <!-- Título centralizado -->
 
-                <div class="mb-3">
-                    <label class="form-label">Nova tarefa</label>
+        <div class="card"> <!-- Cria um card -->
+            <div class="card-body"> <!-- Corpo do card -->
+
+                <div class="mb-3"> <!-- Espaçamento inferior -->
+                    <label class="form-label">Nova tarefa</label> <!-- Texto do campo -->
                     <input 
                       type="text" 
                       id="inputTarefa" 
-                      class="form-control"
-                      placeholder="Digite a tarefa">
+                      class="form-control" 
+                      placeholder="Digite a tarefa"> <!-- Campo para digitar tarefa -->
                 </div>
 
-                <button id="btnAdicionar" class="btn btn-primary">
+                <button id="btnAdicionar" class="btn btn-primary"> <!-- Botão azul -->
                     Adicionar
                 </button>
 
-                <hr>
+                <hr> <!-- Linha separadora -->
 
-                <p id="mensagem" class="fw-bold"></p>
+                <p id="mensagem" class="fw-bold"></p> <!-- Área para mensagens -->
 
-                <ul id="listaTarefas" class="list-group mt-3">
+                <ul id="listaTarefas" class="list-group mt-3"> <!-- Lista de tarefas -->
                     <!-- Tarefas serão adicionadas aqui -->
                 </ul>
 
@@ -41,6 +44,6 @@
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Importa o JavaScript -->
 </body>
 </html>

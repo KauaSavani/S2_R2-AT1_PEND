@@ -1,51 +1,52 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html> <!-- Define que o documento é HTML5 -->
+
+<html lang="pt-br"> <!-- Define o idioma como português do Brasil -->
 
 <head>
-<meta charset="UTF-8">
-<title>Exibir Nome</title>
+<meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
+<title>Exibir Nome</title> <!-- Título da aba do navegador -->
 
 <style>
 
 body{
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+    font-family: Arial, sans-serif; /* Fonte do texto */
+    background-color: #f0f0f0; /* Cor de fundo */
+    display:flex; /* Ativa o Flexbox */
+    justify-content:center; /* Centraliza horizontalmente */
+    align-items:center; /* Centraliza verticalmente */
+    height:100vh; /* Altura total da tela */
 }
 
 .container{
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    background:white; /* Fundo branco */
+    padding:30px; /* Espaçamento interno */
+    border-radius:10px; /* Bordas arredondadas */
+    text-align:center; /* Centraliza o texto */
+    box-shadow:0 0 10px rgba(0,0,0,0.1); /* Sombra leve */
 }
 
 input{
-    padding:10px;
-    margin-top:10px;
+    padding:10px; /* Espaço interno */
+    margin-top:10px; /* Espaço acima */
 }
 
 button{
-    padding:10px 20px;
-    margin-top:10px;
-    background:#000000;
-    color:white;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
+    padding:10px 20px; /* Espaço interno */
+    margin-top:10px; /* Espaço acima */
+    background:#000000; /* Cor de fundo */
+    color:white; /* Cor do texto */
+    border:none; /* Remove borda */
+    border-radius:5px; /* Bordas arredondadas */
+    cursor:pointer; /* Cursor de clique */
 }
 
 button:hover{
-    background:#0e82ff;
+    background:#0e82ff; /* Cor ao passar o mouse */
 }
 
 #mensagem{
-    margin-top:15px;
-    font-weight:bold;
+    margin-top:15px; /* Espaço acima */
+    font-weight:bold; /* Texto em negrito */
 }
 
 </style>
@@ -54,21 +55,21 @@ button:hover{
 
 <body>
 
-<div class="container">
+<div class="container"> <!-- Caixa principal -->
 
-<h2>Digite seu nome</h2>
+<h2>Digite seu nome</h2> <!-- Título -->
 
-<input type="text" id="nome" placeholder="Seu nome">
+<input type="text" id="nome" placeholder="Seu nome"> <!-- Campo de entrada -->
 
-<br><br>
+<br><br> <!-- Quebra de linha -->
 
-<button id="botao">Mostrar mensagem</button>
+<button id="botao">Mostrar mensagem</button> <!-- Botão de ação -->
 
-<p id="mensagem"></p>
+<p id="mensagem"></p> <!-- Onde aparece a mensagem -->
 
 </div>
 
-<script src="script.js"></script>
+<script src="script.js"></script> <!-- Importa o JavaScript -->
 
 </body>
 </html>
